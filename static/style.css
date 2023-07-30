@@ -1,0 +1,603 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #6c757d transparent;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6c757d;
+}
+
+body {
+    background-color: white;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    border-radius: 20px;
+    height: fit-content;
+    width: fit-content;
+    padding: 8px 16px;
+    color: black;
+    background-color: rgb(187, 187, 228);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn a {
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover,
+.btn:hover a {
+    background-color: rgb(217, 217, 232);
+    color: gray;
+}
+
+/* Now the Header */
+header {
+    position: sticky;
+    top: 0;
+    background-color: rgb(58, 58, 59);
+    z-index: 999;
+    /* Add a high z-index value to make sure the navbar appears above other elements */
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 65px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    padding: 4px;
+    list-style: none;
+    margin: 0 23px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover {
+    color: rgb(116, 16, 210);
+}
+
+.nav-left {
+    display: flex;
+    font-size: 1.5rem;
+}
+
+.nav-left img {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 3px;
+}
+
+/* .nav-right {
+    display: flex;
+} */
+
+.hamburger-icon {
+    width: 30px;
+    /* Adjust the size of the hamburger icon */
+    height: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.line1, .line2, .line3 {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    /* Adjust the thickness of the lines */
+    background-color: black;
+    /* Replace with the desired line color */
+    transition: transform 0.3s;
+    /* Add a transition for smooth animation */
+    border-radius: 5px;
+}
+
+.line1 {
+    top: 20%;
+    transform-origin: center;
+    /* Set the transform origin to the center */
+    transform: rotate(0);
+}
+
+.line2 {
+    top: 50%;
+    transform-origin: center;
+    /* Set the transform origin to the center */
+    transform: rotate(0);
+    /* Initially aligned horizontally */
+}
+
+.line3 {
+    top: 80%;
+    transform-origin: center;
+    /* Set the transform origin to the center */
+    transform: rotate(0);
+}
+
+/* using JS on click, change the lines to form a cross */
+.line1-rotate {
+    transform: translateX(0) translateY(10px) rotate(45deg);
+    /* Adjust the translation to center the line */
+}
+
+.line3-rotate {
+    transform: translateX(0) translateY(-8px) rotate(-45deg);
+    /* Adjust the translation to center the line */
+}
+
+
+/* Now Home Section */
+#Home {
+    display: flex;
+    padding: 60px 10%;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.leftSection {
+    font-size: 3rem;
+    width: fit-content;
+    /* Set a fixed width for the leftSection */
+    /* overflow: hidden; */
+    /* Hide any overflow caused by longer text */
+}
+
+.leftSection .low {
+    font-size: 15px;
+}
+
+.mohit-image{
+    width: 40%;
+}
+
+.text-purple {
+    color: rgb(116, 16, 210);
+}
+
+#element {
+    color: rgb(116, 16, 210);
+}
+
+
+/* Now About Me Section */
+#About {
+    padding: 20px;
+    background-color: rgb(238, 238, 255);
+}
+
+.status {
+    padding: 40px 0;
+    display: flex;
+}
+
+.status .mydescription {
+    width: 40%;
+    padding: 0 40px;
+    text-align: justify;
+}
+
+.myskills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: calc(60% - 40px);
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    flex: 1;
+    /* Allow the .status division to grow or shrink */
+    /* max-width: calc(60% - 40px); */
+    /* Set a maximum width to make room for the skill cards */
+    padding: 10px 10px;
+    /* Adjust the padding as needed */
+}
+
+/* .grid-skill {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 250px;
+    grid-auto-flow: dense;
+} */
+
+.skill-card {
+    position: relative;
+    flex: 1 1 150px;
+    max-width: 300px;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    background-color: rgb(187, 187, 228);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card li {
+    list-style-type: circle;
+    font-size: 14px;
+}
+
+.skill-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/* Now Experience Section */
+/* Customize the appearance of the certifications section */
+#experience {
+    padding: 20px 0;
+}
+
+.container {
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+    padding-left: 200px;
+}
+
+.timeline-points {
+    position: sticky;
+    /* Fixed timeline on the left */
+    top: 50px;
+    /* Adjust the top value as needed to align with the timeline */
+    width: 175px;
+    /* Set the desired width for the timeline */
+    padding-right: 10px;
+    /* Add some space between timeline and descriptions */
+    border-right: 2px solid rgb(145 56 228);
+    /* Add the vertical line */
+}
+
+.timeline-points .point {
+    margin-bottom: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+.timeline-points .point::before {
+    /* Create the list pointer for each topic */
+    content: "▶";
+    position: absolute;
+    left: -20px;
+    color: rgb(145 56 228);
+    font-size: 18px;
+    visibility: hidden;
+}
+
+.timeline-points .point.active::before {
+    /* Show the list pointer when description is active */
+    visibility: visible;
+}
+
+/* .timeline-points .date {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+} */
+
+.timeline-points .title {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(145 56 228);
+}
+
+.descriptions {
+    flex: 1;
+    /* Take up available space */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.descriptions .text-muted {
+    font-size: 24px;
+}
+
+.description {
+    display: none;
+    width: 100%;
+    margin: 10px 20px;
+    padding-left: 20px;
+    /* Add some space between descriptions and timeline */
+}
+
+.description ul {
+    padding: 20px 0;
+    text-align: justify;
+}
+
+.description.active {
+    display: block;
+}
+
+
+
+/* Now Projects Section */
+#projects {
+    padding: 20px;
+    background-color: rgb(238, 238, 255);
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    flex: 1;
+    /* Allow the .status division to grow or shrink */
+    /* max-width: calc(60% - 40px); */
+    /* Set a maximum width to make room for the skill cards */
+    padding: 10px 10px;
+    /* Adjust the padding as needed */
+}
+
+.grid-project {
+    padding: 60px 0;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* grid-auto-rows: 250px;
+    grid-auto-flow: dense; */
+}
+
+.flashcard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(187, 187, 228);
+    /* #f8f8f8;*/
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: fit-content;
+    transition: height 0.3s;
+}
+
+.flashcard ul {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: none;
+    /* Hide the description by default */
+    padding: 0 10px;
+    text-align: justify;
+}
+
+.flashcard:hover {
+    height: auto;
+}
+
+.flashcard:hover ul {
+    display: block;
+    /* Show the description on hover */
+}
+
+
+/* Now Education Section */
+#education {
+    padding: 20px 0;
+}
+
+.edu {
+    padding: 80px;
+    display: flex;
+}
+
+.edu .desc {
+    margin: 0 100px;
+    list-style: none;
+}
+
+.edu .desc li {
+    padding: 15px 0;
+}
+
+.study-image img {
+    width: 450px;
+    padding-top: 60px;
+}
+
+/* Now Services Section */
+#services {
+    padding: 20px;
+    justify-content: center;
+    background-color: rgb(238, 238, 255);
+}
+
+.grid-service {
+    display: flex;
+    justify-content: space-evenly;
+    /* margin: 0 20%; */
+    padding: 60px 0;
+}
+
+
+/* Now Contact Me Section */
+#contacts {
+    padding: 20px 0;
+    text-align: center;
+}
+
+#contacts img {
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 3px;
+}
+
+
+footer {
+    text-align: center;
+    /* background-color: #333333; */
+    /* color: #ffffff; */
+    /* height: fit-content; */
+    padding: 16px 0;
+}
+
+
+
+@media only screen and (max-width: 1090px) {
+    nav {
+        transition: all 0.4s ease-out;
+    }
+
+    /* nav ul li {
+        padding: 0;
+        margin: 0 0;
+    } */
+
+    .nav-right ul {
+        flex-direction: column;
+    }
+
+    .h-resp {
+        height: 400px;
+    }
+
+    .visible-resp {
+        /* opacity: 0; */
+        display: none;
+    }
+    .ham-show li{
+        padding: 10px;
+        margin-right: 70px;
+    }
+
+    .hamburger-icon {
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 15px;
+        display: block;
+    }
+
+    /* For Home Section */
+    #Home {
+        flex-direction: column-reverse;
+        padding: 0 0;
+    }
+
+    .leftSection {
+        font-size: 2rem;
+    }
+    
+    .mohit-image{
+        width: 80%;
+        margin-bottom: 50px;
+    }
+
+
+    /* For About Section */
+    .status {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .status .mydescription {
+        width: 100%;
+        padding: 0;
+        margin: 32px 0;
+    }
+    
+
+    .myskills{
+        max-width: 100%;
+    }
+
+
+
+    /* For Experience Section */
+    .center-container{
+        width: 70%;
+        padding-left: 0px;
+    }
+
+
+    /* For Projects Section */
+    /* .grid-project {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    } */
+
+
+    /* For Education Section */
+    .edu {
+        flex-direction: column-reverse;
+        justify-content: center;
+        padding: 10px 0;
+    }
+    .edu .desc{
+        margin: 30px 20%;
+    }
+    .study-image img {
+        width: 100%;
+    }
+
+
+    /* For Service Section */
+    .grid-service{
+        flex-direction: column;
+    }
+
+    .grid-service .skill-card{
+        max-width: 100%;
+        margin-bottom: 50px;
+    }
+}
