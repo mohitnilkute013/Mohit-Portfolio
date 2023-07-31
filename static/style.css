@@ -40,7 +40,7 @@ h2 {
     width: fit-content;
     padding: 8px 16px;
     color: black;
-    background-color: rgb(187, 187, 228);
+    background-color: rgb(220, 220, 252);
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -52,7 +52,7 @@ h2 {
 
 .btn:hover,
 .btn:hover a {
-    background-color: rgb(217, 217, 232);
+    background-color: rgb(238, 238, 255);
     color: gray;
 }
 
@@ -89,7 +89,7 @@ nav a {
 }
 
 nav ul li a:hover {
-    color: rgb(116, 16, 210);
+    color: rgb(98, 98, 234);
 }
 
 .nav-left {
@@ -249,7 +249,7 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     text-align: justify;
-    background-color: rgb(187, 187, 228);
+    background-color: rgb(220, 220, 252);
     border-radius: 16px;
     padding: 20px;
     margin-bottom: 5px;
@@ -300,7 +300,7 @@ nav ul li a:hover {
     /* Set the desired width for the timeline */
     padding-right: 10px;
     /* Add some space between timeline and descriptions */
-    border-right: 2px solid rgb(145 56 228);
+    border-right: 2px solid rgb(98, 98, 234);
     /* Add the vertical line */
 }
 
@@ -315,7 +315,7 @@ nav ul li a:hover {
     content: "▶";
     position: absolute;
     left: -20px;
-    color: rgb(145 56 228);
+    color: rgb(98, 98, 234);
     font-size: 18px;
     visibility: hidden;
 }
@@ -334,7 +334,7 @@ nav ul li a:hover {
 .timeline-points .title {
     font-size: 16px;
     font-weight: bold;
-    color: rgb(145 56 228);
+    color: rgb(98, 98, 234);
 }
 
 .descriptions {
@@ -351,7 +351,7 @@ nav ul li a:hover {
 .description {
     display: none;
     width: 100%;
-    margin: 10px 20px;
+    margin: 10px 0;
     padding-left: 20px;
     /* Add some space between descriptions and timeline */
 }
@@ -400,15 +400,18 @@ nav ul li a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgb(187, 187, 228);
+    background-color: rgb(220, 220, 252);
     /* #f8f8f8;*/
     border-radius: 16px;
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    /* overflow: hidden; */
     height: fit-content;
-    transition: height 0.3s;
+    /* transition: height 2.7s; */
+    max-height: 150px;
+    transition: max-height 4s;
+    overflow: hidden;
 }
 
 .flashcard ul {
@@ -416,16 +419,22 @@ nav ul li a:hover {
     margin-bottom: 10px;
     display: none;
     /* Hide the description by default */
-    padding: 0 10px;
+    padding: 0 20px;
     text-align: justify;
+    list-style-type: circle;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 4s;
 }
 
 .flashcard:hover {
-    height: auto;
+    /* height: auto; */
+    max-height: 1000px; /* Use a large value to accommodate content */
 }
 
 .flashcard:hover ul {
     display: block;
+    max-height: 1000px; /* Use a large value to accommodate content */
     /* Show the description on hover */
 }
 
@@ -496,7 +505,7 @@ footer {
 
 @media only screen and (max-width: 1090px) {
     nav {
-        transition: all 0.4s ease-out;
+        transition: all 0.5s ease-out;
     }
 
     /* nav ul li {
