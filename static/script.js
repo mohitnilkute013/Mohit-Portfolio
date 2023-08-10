@@ -50,3 +50,16 @@ burger.addEventListener('click', ()=>{
 });
 
 
+// For Skill Card Height
+document.addEventListener("DOMContentLoaded", function () {
+  const skillCards = document.querySelectorAll(".skill-card");
+  
+  skillCards.forEach((skillCard) => {
+      const ul = skillCard.querySelector("ul");
+      const cardHeight = skillCard.clientHeight;
+
+      if (cardHeight > 200) {
+          ul.style.columnCount = 2;
+      }
+  });
+});
