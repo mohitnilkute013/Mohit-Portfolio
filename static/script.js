@@ -1,3 +1,21 @@
+// For Navbar and its Hamburger
+burger = document.querySelector('.hamburger-icon')
+navbar = document.querySelector('nav')
+navright = document.querySelector('.ham-show')
+line1 = document.querySelector('.line1')
+line3 = document.querySelector('.line3')
+
+
+burger.addEventListener('click', ()=>{
+  navright.classList.toggle('visible-resp');
+  navbar.classList.toggle('h-resp');
+  line1.classList.toggle('line1-rotate');
+  line3.classList.toggle('line3-rotate');
+});
+
+
+// Home Section
+// For typing new text
 var typed = new Typed('#element', {
   strings: ['Data Scientist', 'Web Developer', 'Data Analyst'],
   typeSpeed: 150,
@@ -10,6 +28,24 @@ var typed = new Typed('#element', {
 });
 
 
+// About Me Section
+// For Skill Card Height, To change columns in ul
+document.addEventListener("DOMContentLoaded", function () {
+  const skillCards = document.querySelectorAll(".skill-card");
+  
+  skillCards.forEach((skillCard) => {
+      const ul = skillCard.querySelector("ul");
+      const cardHeight = skillCard.clientHeight;
+
+      if (cardHeight > 200) {
+          ul.style.columnCount = 2;
+      }
+  });
+});
+
+
+// Experience Section
+// For Showing description of only one timeline point
 document.addEventListener("DOMContentLoaded", function () {
   const points = document.querySelectorAll(".point");
   const descriptions = document.querySelectorAll(".description");
@@ -35,31 +71,45 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-burger = document.querySelector('.hamburger-icon')
-navbar = document.querySelector('nav')
-navright = document.querySelector('.ham-show')
-line1 = document.querySelector('.line1')
-line3 = document.querySelector('.line3')
+// Projects Section
+const flashcards = document.querySelectorAll('.flashcard');
 
-
-burger.addEventListener('click', ()=>{
-  navright.classList.toggle('visible-resp');
-  navbar.classList.toggle('h-resp');
-  line1.classList.toggle('line1-rotate');
-  line3.classList.toggle('line3-rotate');
+flashcards.forEach((flashcard) => {
+  const flashul = flashcard.querySelector('ul');
+  
+  flashcard.addEventListener('mouseenter', () => {
+    flashcard.classList.add('flash-resp');
+    flashul.style.maxHeight = '1000px';
+    // flashul.style.display = 'block';
+    flashul.style.visibility = 'visible';
+    flashul.style.opacity = '1';
+  });
+  
+  flashcard.addEventListener('mouseleave', () => {
+    flashcard.classList.remove('flash-resp');
+    flashul.style.maxHeight = '0px';
+    // flashul.style.display = 'none';
+    flashul.style.visibility = 'hidden';
+    flashul.style.opacity = '0';
+  });
 });
 
 
-// For Skill Card Height
+// Footer
+// JavaScript code to display total views
 document.addEventListener("DOMContentLoaded", function () {
-  const skillCards = document.querySelectorAll(".skill-card");
+  // Replace 'YOUR_TRACKING_ID' with your actual tracking ID
+  const trackingID = 'G-4RLD1YJKW1';
   
-  skillCards.forEach((skillCard) => {
-      const ul = skillCard.querySelector("ul");
-      const cardHeight = skillCard.clientHeight;
-
-      if (cardHeight > 200) {
-          ul.style.columnCount = 2;
-      }
+  // Get the 'totalViews' element
+  const totalViewsElement = document.getElementById('totalViews');
+  
+  // Use the 'gtag' function to fetch metrics from Google Analytics
+  gtag('event', 'page_view', {
+    send_to: trackingID,
+    event_callback: function () {
+      const totalViews = gtag.get('dataLayer', '0').event_metrics.page_views;
+      totalViewsElement.textContent = 'Total Views: ' + totalViews;
+    }
   });
 });

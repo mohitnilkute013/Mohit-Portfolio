@@ -213,6 +213,10 @@ nav ul li a:hover {
     text-align: justify;
 }
 
+.status .mydescription .btn{
+    margin-top: 10px;
+}
+
 .myskills{
     display: flex;
     justify-content: center;
@@ -284,7 +288,7 @@ nav ul li a:hover {
 }
 
 .container {
-    padding: 100px 0;
+    padding: 40px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -393,7 +397,7 @@ nav ul li a:hover {
 }
 
 .grid-project {
-    padding: 60px 0;
+    padding: 40px 0;
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -413,37 +417,42 @@ nav ul li a:hover {
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* overflow: hidden; */
     height: fit-content;
-    /* transition: height 2.7s; */
-    max-height: 150px;
-    transition: max-height 4s;
+    max-height: 200px;
+    transition: max-height 2s ease-in-out;
     overflow: hidden;
 }
 
 .flashcard ul {
     font-size: 16px;
-    margin-bottom: 10px;
-    display: none;
-    /* Hide the description by default */
+    margin: 0; /* Add this line to reset margin */
     padding: 0 20px;
     text-align: justify;
     list-style-type: circle;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 4s;
+    opacity: 0;
+    visibility: hidden;
+    /* transition: max-height 0.5s, opacity 0.5s, visibility 0.5s; */
 }
 
-.flashcard:hover {
-    /* height: auto; */
-    max-height: 1000px; /* Use a large value to accommodate content */
+
+.flash-resp{
+    max-height: 1000px;
 }
 
-.flashcard:hover ul {
-    display: block;
-    max-height: 1000px; /* Use a large value to accommodate content */
-    /* Show the description on hover */
+.flash-ul-resp {
+    opacity: 0;
+    max-height: 0px;
+    visibility: hidden;
+    overflow: hidden;
+    transition: max-height 1s, opacity 2s, visibility 2s;
 }
+
+/* .flash-ul-resp{
+    display: none;
+    max-height: 0px;
+} */
 
 
 /* Now Education Section */
@@ -452,7 +461,7 @@ nav ul li a:hover {
 }
 
 .edu {
-    padding: 80px;
+    padding: 40px 140px;
     display: flex;
 }
 
@@ -487,7 +496,7 @@ nav ul li a:hover {
 
 /* Now Contact Me Section */
 #contacts {
-    padding: 20px 0;
+    padding-top: 20px;
     text-align: center;
 }
 
@@ -608,9 +617,8 @@ footer {
     .status .mydescription {
         width: 100%;
         padding: 0;
-        margin: 32px 0;
+        margin-bottom: 50px;
     }
-    
 
     .myskills{
         max-width: 100%;
