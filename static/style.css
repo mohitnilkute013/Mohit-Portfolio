@@ -78,9 +78,8 @@ nav ul {
 }
 
 nav ul li {
-    padding: 4px;
+    padding: 24px;
     list-style: none;
-    margin: 0 23px;
 }
 
 nav a {
@@ -95,13 +94,14 @@ nav ul li a:hover {
 .nav-left {
     display: flex;
     font-size: 1.5rem;
+    padding-left: 16px;
 }
 
 .nav-left img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 5px;
-    margin: 3px;
+    margin: 2px 20px;
 }
 
 /* .nav-right {
@@ -476,7 +476,7 @@ nav ul li a:hover {
 
 .study-image img {
     width: 450px;
-    padding-top: 60px;
+    padding-top: 40px;
 }
 
 /* Now Services Section */
@@ -557,9 +557,13 @@ footer {
 
 
 
-@media only screen and (max-width: 1090px) {
+@media only screen and (max-width: 1175px) {
     nav {
         transition: all 0.5s ease-out;
+    }
+    
+    .nav-left {
+        padding-left: 0px;
     }
 
     /* nav ul li {
@@ -573,6 +577,12 @@ footer {
 
     .h-resp {
         height: 400px;
+
+        @media only screen and (max-width: 419px){
+            .nav-left img {
+                margin: 18px 20px;
+            }
+        }
     }
 
     .visible-resp {
@@ -581,7 +591,7 @@ footer {
     }
     .ham-show li{
         padding: 10px;
-        margin-right: 70px;
+        margin-right: 40px;
     }
 
     .hamburger-icon {
@@ -663,3 +673,11 @@ footer {
         margin-bottom: 50px;
     }
 }
+
+
+
+/* @media only screen and (max-width: 419px){
+    .nav-left img {
+        margin: 18px 20px;
+    }
+} */
