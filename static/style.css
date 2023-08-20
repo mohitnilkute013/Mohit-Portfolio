@@ -94,7 +94,7 @@ nav ul li a:hover {
 .nav-left {
     display: flex;
     font-size: 1.5rem;
-    padding-left: 16px;
+    /* padding-left: 16px; */
 }
 
 .nav-left img {
@@ -673,11 +673,3 @@ footer {
         margin-bottom: 50px;
     }
 }
-
-
-
-/* @media only screen and (max-width: 419px){
-    .nav-left img {
-        margin: 18px 20px;
-    }
-} */
