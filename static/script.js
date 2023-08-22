@@ -97,19 +97,39 @@ flashcards.forEach((flashcard) => {
 
 // Footer
 // JavaScript code to display total views
-document.addEventListener("DOMContentLoaded", function () {
-  // Replace 'YOUR_TRACKING_ID' with your actual tracking ID
-  const trackingID = 'G-4RLD1YJKW1';
+// document.addEventListener("DOMContentLoaded", function () {
+//   // Replace 'YOUR_TRACKING_ID' with your actual tracking ID
+//   const trackingID = 'G-4RLD1YJKW1';
   
-  // Get the 'totalViews' element
-  const totalViewsElement = document.getElementById('totalViews');
+//   // Get the 'totalViews' element
+//   const totalViewsElement = document.getElementById('totalViews');
   
-  // Use the 'gtag' function to fetch metrics from Google Analytics
-  gtag('event', 'page_view', {
-    send_to: trackingID,
-    event_callback: function () {
-      const totalViews = gtag.get('dataLayer', '0').event_metrics.page_views;
-      totalViewsElement.textContent = 'Total Views: ' + totalViews;
-    }
-  });
-});
+//   // Use the 'gtag' function to fetch metrics from Google Analytics
+//   gtag('event', 'page_view', {
+//     send_to: trackingID,
+//     event_callback: function () {
+//       const totalViews = gtag.get('dataLayer', '0').event_metrics.page_views;
+//       totalViewsElement.textContent = 'Total Views: ' + totalViews;
+//     }
+//   });
+// });
+
+
+// JavaScript code to display total views
+// document.addEventListener("DOMContentLoaded", function () {
+//   // Replace 'YOUR_TRACKING_ID' with your actual tracking ID
+//   const trackingID = 'G-4RLD1YJKW1';
+  
+//   // Get the 'totalViews' element
+//   const totalViewsElement = document.getElementById('totalViews');
+  
+//   // Use the 'gtag' function to fetch metrics from Google Analytics
+//   gtag('event', 'page_view', {
+//     send_to: trackingID,
+//     event_callback: function () {
+//       // Access page views directly from the global 'ga' object
+//       const totalViews = gtag.getAll()[0].get('pageviews');
+//       totalViewsElement.textContent = 'Total Views: ' + totalViews;
+//     }
+//   });
+// });
