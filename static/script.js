@@ -14,6 +14,32 @@ burger.addEventListener('click', ()=>{
 });
 
 
+// For Scrolling Correctly
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll('.scroll a');
+  
+  navLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault(); // Prevent default link behavior
+      
+      const targetSectionId = link.getAttribute('href');
+      const targetSection = document.querySelector(targetSectionId);
+      
+      if (targetSection) {
+        // Calculate the target position, subtract a small value (e.g. 80px for navbar)
+        const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY - 65;
+        
+        // Smoothly scroll to the adjusted target position
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+});
+
+
 // Home Section
 // For typing new text
 var typed = new Typed('#element', {

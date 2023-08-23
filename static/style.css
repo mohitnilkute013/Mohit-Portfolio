@@ -321,6 +321,11 @@ nav ul li a:hover {
     position: relative;
 }
 
+.timeline-points .point a{
+    text-decoration: none;
+    color: rgb(98, 98, 234);
+}
+
 .timeline-points .point::before {
     /* Create the list pointer for each topic */
     content: "▶";
@@ -348,14 +353,14 @@ nav ul li a:hover {
     color: rgb(98, 98, 234);
 }
 
-.descriptions {
+#descriptions {
     flex: 1;
     /* Take up available space */
     display: flex;
     flex-wrap: wrap;
 }
 
-.descriptions .text-muted {
+#descriptions .text-muted {
     font-size: 24px;
 }
 
@@ -637,7 +642,7 @@ footer {
 
 
     /* For Experience Section */
-    .center-container{
+    .center-container {
         width: 70%;
         padding-left: 0px;
     }
@@ -671,5 +676,33 @@ footer {
     .grid-service .skill-card{
         max-width: 100%;
         margin-bottom: 50px;
+    }
+}
+
+
+@media only screen and (max-width: 650px) {
+    .center-container {
+        width: 70%;
+        padding-left: 0px;
+        flex-direction: column;
+    }
+
+    .timeline-points {
+        position: static; /* Change to static positioning */
+        width: 100%; /* Full width for column layout */
+        border-right: none; /* Remove the vertical line */
+        padding-right: 0; /* Remove padding */
+        text-align: center;
+    }
+
+    #descriptions {
+        display: block; /* Change to block display */
+        margin-top: 20px; /* Add some margin between points and descriptions */
+    }
+
+    .description {
+        width: 100%;
+        margin: 10px 0;
+        padding-left: 0; /* Remove left padding */
     }
 }
