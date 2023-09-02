@@ -188,11 +188,11 @@ nav ul li a:hover {
 }
 
 .text-purple {
-    color: rgb(116, 16, 210);
+    color: rgb(75, 75, 243);   /*rgb(116, 16, 210);*/
 }
 
 #element {
-    color: rgb(116, 16, 210);
+    color: rgb(75, 75, 243);
 }
 
 
