@@ -152,12 +152,12 @@ nav ul li a:hover {
 
 /* using JS on click, change the lines to form a cross */
 .line1-rotate {
-    transform: translateX(0) translateY(10px) rotate(45deg);
+    transform: translateX(0) translateY(9px) rotate(53deg);
     /* Adjust the translation to center the line */
 }
 
 .line3-rotate {
-    transform: translateX(0) translateY(-8px) rotate(-45deg);
+    transform: translateX(0) translateY(-9px) rotate(-53deg);
     /* Adjust the translation to center the line */
 }
 
@@ -495,7 +495,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-evenly;
     /* margin: 0 20%; */
-    padding: 60px 0;
+    padding: 30px 0;
 }
 
 
