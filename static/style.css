@@ -628,6 +628,10 @@ footer {
     .leftSection {
         font-size: 2rem;
     }
+
+    .leftSection .image {
+        margin-top: 0px;
+    }
     
     .mohit-image{
         width: 80%;
