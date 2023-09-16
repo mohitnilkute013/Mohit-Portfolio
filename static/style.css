@@ -189,6 +189,8 @@ nav ul li a:hover {
 }
 
 .leftSection .logo-links{
+    justify-content: center;
+    align-items: center;
     margin-top: -10px;
 }
 
@@ -522,6 +524,7 @@ nav ul li a:hover {
     padding: 10px;
     border-radius: 5px;
     margin: 3px;
+    justify-content: center;
     align-items: center;
 }
 
