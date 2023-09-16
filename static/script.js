@@ -3,6 +3,7 @@ burger = document.querySelector('.hamburger-icon')
 navbar = document.querySelector('nav')
 navright = document.querySelector('.ham-show')
 line1 = document.querySelector('.line1')
+line2 = document.querySelector('.line2')
 line3 = document.querySelector('.line3')
 
 
@@ -10,6 +11,7 @@ burger.addEventListener('click', ()=>{
   navright.classList.toggle('visible-resp');
   navbar.classList.toggle('h-resp');
   line1.classList.toggle('line1-rotate');
+  line2.classList.toggle('line2-viz')
   line3.classList.toggle('line3-rotate');
 });
 

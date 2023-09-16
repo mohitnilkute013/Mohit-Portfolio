@@ -88,7 +88,7 @@ nav a {
 }
 
 nav ul li a:hover {
-    color: rgb(98, 98, 234);
+    color: rgb(75, 75, 243); /* rgb(98, 98, 234); */
 }
 
 .nav-left {
@@ -123,7 +123,7 @@ nav ul li a:hover {
     /* Adjust the thickness of the lines */
     background-color: black;
     /* Replace with the desired line color */
-    transition: transform 0.3s;
+    transition: transform 0.3s, opacity 0.3s;;
     /* Add a transition for smooth animation */
     border-radius: 5px;
 }
@@ -141,6 +141,7 @@ nav ul li a:hover {
     /* Set the transform origin to the center */
     transform: rotate(0);
     /* Initially aligned horizontally */
+    opacity: 1;
 }
 
 .line3 {
@@ -152,12 +153,15 @@ nav ul li a:hover {
 
 /* using JS on click, change the lines to form a cross */
 .line1-rotate {
-    transform: translateX(0) translateY(9px) rotate(53deg);
+    transform: translateX(0) translateY(9px) rotate(45deg);
     /* Adjust the translation to center the line */
 }
-
+.line2-viz {
+    opacity: 0;
+    transition: opacity 0.3s; /* Add a transition for smooth opacity change */
+}
 .line3-rotate {
-    transform: translateX(0) translateY(-9px) rotate(-53deg);
+    transform: translateX(0) translateY(-9px) rotate(-45deg);
     /* Adjust the translation to center the line */
 }
 
@@ -180,7 +184,16 @@ nav ul li a:hover {
 }
 
 .leftSection .low {
+    display: flex;
     font-size: 15px;
+}
+
+.leftSection .image{
+    margin-top: -10px;
+}
+
+.leftSection .image img{
+    margin-right: 15px;
 }
 
 .mohit-image{
@@ -506,11 +519,10 @@ nav ul li a:hover {
 }
 
 #contacts img {
-    width: 30px;
-    height: 30px;
     padding: 10px;
     border-radius: 5px;
     margin: 3px;
+    align-items: center;
 }
 
 
