@@ -188,12 +188,12 @@ nav ul li a:hover {
     font-size: 15px;
 }
 
-.leftSection .image{
+.leftSection .logo-links{
     margin-top: -10px;
 }
 
-.leftSection .image img{
-    margin-right: 15px;
+.leftSection .logo-links img{
+    margin-right: 35px;
 }
 
 .mohit-image{
@@ -629,7 +629,7 @@ footer {
         font-size: 2rem;
     }
 
-    .leftSection .image {
+    .leftSection .logo-links {
         margin-top: 0px;
     }
     
