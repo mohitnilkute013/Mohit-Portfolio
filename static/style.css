@@ -56,6 +56,11 @@ h2 {
     color: gray;
 }
 
+.buttons{
+    display: flex;
+    gap: 20px;
+}
+
 /* Now the Header */
 header {
     position: sticky;
