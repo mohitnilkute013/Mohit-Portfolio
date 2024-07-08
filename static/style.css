@@ -504,6 +504,15 @@ nav ul li a:hover {
     padding-top: 40px;
 }
 
+
+/* Now Badges Section */
+.badges{
+    margin: 20px 0 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
 /* Now Services Section */
 #services {
     padding: 20px;
@@ -517,7 +526,6 @@ nav ul li a:hover {
     /* margin: 0 20%; */
     padding: 30px 0;
 }
-
 
 /* Now Contact Me Section */
 #contacts {
