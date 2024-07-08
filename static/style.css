@@ -506,10 +506,19 @@ nav ul li a:hover {
 
 
 /* Now Badges Section */
+#Certifications{
+    padding: 20px;
+}
+
 .badges{
-    margin: 20px 0 20px 0;
+    /* margin: 20px 0 20px 0;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-evenly; */
+    padding: 40px 0;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
 }
 
 
