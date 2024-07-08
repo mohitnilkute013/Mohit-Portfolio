@@ -517,7 +517,7 @@ nav ul li a:hover {
     padding: 40px 0;
     display: grid;
     gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     justify-items: center;
 }
 
